@@ -1,0 +1,12 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
+  port: 5432
+  host: localhost
+  username: postgres
+  password: 12345678
+
+development:
+  <<: *default
+  database: graph_ql_demo_development
