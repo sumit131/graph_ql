@@ -1,0 +1,15 @@
+<div class="container">
+  <div class="form-query" style='text-align: center;'>
+    <h3> Type your query below and you will get response accordingly! </h3>
+
+    <%= form_tag test_query_queries_path, method: :post, remote: true do |f| %>
+      <%= text_area_tag :query, '', placeholder: 'Write your query here', rows: 6, cols: 60 %>
+      <br>
+      <%= submit_tag 'Get response', style:'width: 39%; padding: 6px; margin: 10px;' %>
+    <% end %>
+
+  <b>Response:</b>
+  <div class='response'></div>
+    </div>
+
+</div>
