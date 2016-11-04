@@ -1,15 +1,18 @@
-<div class="container">
-  <div class="form-query" style='text-align: center;'>
-    <h3> Type your query below and you will get response accordingly! </h3>
+<div class="form-query" style='text-align: center;'>
+  <h3> Type your query below and you will get response accordingly via GraphQL! </h3>
 
-    <%= form_tag test_query_queries_path, method: :post, remote: true do |f| %>
-      <%= text_area_tag :query, '', placeholder: 'Write your query here', rows: 6, cols: 60 %>
-      <br>
-      <%= submit_tag 'Get response', style:'width: 39%; padding: 6px; margin: 10px;' %>
-    <% end %>
+  <%= form_tag test_query_queries_path, method: :post, remote: true do |f| %>
+    <%= text_area_tag :query, '', placeholder: 'Write your query here', rows: 6, cols: 60 %>
+    <br>
+    <%= submit_tag 'Get response', style:'width: 39%; padding: 6px; margin: 10px;' %>
+  <% end %>
 
   <b>Response:</b>
   <div class='response'></div>
-    </div>
-
 </div>
+<br><br>
+<b>Query example:</b>
+<ul>
+  <li>{ blog(id: 1) { title content }}</li>
+  <li>{ blog(id: 1) { title content author { name } }}</li>
+</ul>
