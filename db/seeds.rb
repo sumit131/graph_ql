@@ -5,3 +5,9 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+# Create dummy author
+(1..10).map{|id| Author.create(name: 'Author ' + id.to_s)}
+
+# Create dummy blogs
+(1..10).map{|id| Blog.create(title: 'Blog ' + id.to_s, content: 'Blog ' + id.to_s + ' content', author_id: id )}
